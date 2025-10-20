@@ -18,7 +18,7 @@ public class KafkaController {
     @GetMapping("/publish")
     public ResponseEntity<String>publish(@RequestParam("message") String message){
         kafkaProducer.sendMessage(message);
-        return ResponseEntity.ok("Message Sent to the topic");
+        return ResponseEntity.ok("JSON Message Sent to the topic");
     }
 
 }
