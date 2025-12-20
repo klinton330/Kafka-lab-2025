@@ -4,6 +4,7 @@ import com.launchdarkly.eventsource.EventSource;
 import okhttp3.Headers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -22,11 +23,12 @@ public class WikimediaChangesProducer {
     public WikimediaChangesProducer(KafkaTemplate<String,String> kafkaTemplate){
         this.kafkaTemplate = kafkaTemplate;
     }
-
+    @Value("${spring.kafka.topic.name}")
+    private String topicName;
     public void sendMessage() throws InterruptedException {
-        String topic="wikimedia_recent_change";
         //To read real time stream data from wikimedia we need to use wikimedia
-        EventHandler eventHandler= new WikimediaChangesHandler(kafkaTemplate,topic);
+
+        EventHandler eventHandler= new WikimediaChangesHandler(kafkaTemplate,topicName);
         String URL= "https://stream.wikimedia.org/v2/stream/recentchange";
         Map<String, String> headers = new HashMap<>();
         headers.put("User-Agent", "KafkaProducerApp/1.0 (abc@example.com)"); // must include contact info
