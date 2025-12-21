@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:3.5.10-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test-autoconfigure/3.5.10-SNAPSHOT/spring-boot-test-autoconfigure-3.5.10-20251218.121149-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test-autoconfigure/3.5.10-SNAPSHOT/spring-boot-test-autoconfigure-3.5.10-20251218.121149-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test-autoconfigure/3.5.10-SNAPSHOT/spring-boot-test-autoconfigure-3.5.10-20251218.121149-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
